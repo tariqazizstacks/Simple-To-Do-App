@@ -4,64 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple-To-Do-List</title>
-    <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: #e4dfb2;
-        }
-        .container{
-            height: 140px;
-            width: 350px;
-            border: 3px rgb(3, 2, 2) solid;
-            border-radius: 15px;
-             padding-left: 90px;
-           
-
-        }
-        input{
-            height: 20px ;
-            width: 150px;
-            border: 2px rgb(3, 3, 3) solid;
-            border-radius: 5px;
-        }
-        input:hover{
-            background-color: burlywood;
-        }
-        button{
-            height: 25px;
-            width: 70px;
-            background-color: black;
-            color: white;
-            border: 1px black solid;
-            border: 2px rgb(3, 3, 3) solid;
-            border-radius: 5px;
-        }
-        button:hover{
-            background-color: white;
-            color: black;
-        }
-        ul{
-            margin-top: 0%;
-            display: flex;
-            flex-direction: column;
-            /* justify-content: center; */
-            /* align-items: center; */
-            border: 3px black solid;
-            border-radius: 10px;
-            height: 600px;
-            width: 400px;
-        }
-        #listhead{
-                margin-bottom: 0%;
-        }
-        li{
-            margin-top: 0%;
-            font-size: large;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
  
@@ -72,21 +15,6 @@
     </div>
     <h2 id="listhead">List Your Items Here!Below👇</h2>
     <ul id="unorderlist"></ul>
-    <script>
-        let input=document.querySelector("input")
-        let btn= document.querySelector("button");
-        let ulist= document.querySelector("ul");
-
-        btn.addEventListener("click",()=>{
-            let task = input.value.trim();
-            if(task!==""){
-                let list=document.createElement("li");
-                list.innerText=task;
-                ulist.appendChild(list);
-                input.value=""
-            }
-        })
-
-    </script>  
+<script src="script.js"></script>
 </body>
 </html>
